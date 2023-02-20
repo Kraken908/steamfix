@@ -1,0 +1,13 @@
+#this seem to happen on every 64 bits OS.
+
+#Full bug report here: https://github.com/ValveSoftware/steam-for-linux/issues/321
+
+
+#Solution:
+
+#gksudo gedit /etc/ld.so.conf.d/steam.conf
+#Add next two lines to file:
+
+#/usr/lib32
+#/usr/lib/i386-linux-gnu/mesa
+#dThen execute:
